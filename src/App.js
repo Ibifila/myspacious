@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import Navb from './component/Navb';
+import PlanetLoader from './component/PlanetLoader';
+import Home from './component/Home';
+import { useState, useEffect } from 'react'
+import { Container, Row } from 'react-bootstrap';
+
+
 
 function App() {
+
+  const [pageLoading, setPageLoading] = useState(true);
+  const [loadContent, setLoadContent] = useState(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoadContent(true); 
+      
+      setPageLoading(false);
+      }, 2000);
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-light pb-5">
+      <Router>
+        <Container className="app-height">
+          <Row className="justify-content-center ps-5">
+              <Navb />
+              <Switch>
+                <Route exact path="/">
+                {loadContent && <Home />}
+                {pageLoading && <PlanetLoader/>} 
+                </Route>
+                {/* <Route path="/Characters">
+                  <Characters />
+                </Route> */}
+              </Switch>
+          </Row>
+        </Container>
+    </Router>
     </div>
   );
+
 }
 
 export default App;

@@ -1,13 +1,126 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Poppins', sans-serif !important;
+  background: #F2F2F2 !important;
+}
+
+.navbar-light a.navbar-brand,
+.navbar-light a.navbar-brand:hover {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 72px;
+  color: #121C33 !important;
+  letter-spacing: 1px;
+}
+
+.general-radius {
+  border-radius: 16px !important;
+}
+
+.xter-img {
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+}
+
+.mytabs {
+  cursor: pointer;
+  
+}
+
+.mytabs .nav-link {
+  color:#686d7c !important;
+  font-weight: 600;
+}
+
+.mytabs .nav-link.active {
+  color: #121C33 !important;
+  background: rgba(18, 28, 51, 0.05) !important;
+  border-radius: 8px;
+}
+
+.mydropdown .btn{
+  color: #121C33 !important;
+  background: rgba(18, 28, 51, 0.05) !important;
+  border-color: rgba(18, 28, 51, 0.05) !important;
+  box-shadow: none !important;
+}
+
+.mydropdown .btn-primary:active, .btn-primary:active{
+  color: #121C33 !important;
+  background: rgba(18, 28, 51, 0.05) !important;
+  border-color: rgba(18, 28, 51, 0.05) !important;
+}
+
+.plan-mod p {
+  margin-bottom: 0;
+  font-size: 10px !important;
+}
+
+.modal-w {
+  width: 20%;
+}
+
+.secondary-color {
+  color:#686d7c !important;
+}
+
+.planet-cards {
+  cursor: pointer;
+}
+
+.cards-text h6 {
+  color: #121C33 !important;
+}
+
+.cards-text p {
+  color:#686d7c !important;
+}
+
+
+.char-text h6 {
+  color: #121C33 !important;
+  font-weight: 600;
+}
+
+.char-text p {
+  color:#686d7c !important;
+}
+
+.add-icon {
+  background:  #121C33 !important;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.mt-n1 {
+  margin-top: -3rem !important;
+  margin-left: -3rem !important;
+}
+
+.general-text {
+  color: #121C33 !important;
+}
+
+.square-border {
+  border-radius: 4px;
+  background: rgba(18, 28, 51, 0.05) !important;
+}
+
+.dark-btn {
+  border-radius: 4px;
+  background: #121C33 !important;
+}
+
+.loader-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
